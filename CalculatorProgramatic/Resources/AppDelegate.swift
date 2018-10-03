@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow()
+        let navigationController = UINavigationController(rootViewController: StepCalculatorViewController())
+        window?.rootViewController = navigationController
+        
+        let healthStore = HKHealthStore()
+        
+        let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
+        
+        healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+            if !success {
+                fatalError()
+            }
+        }
+        
         return true
     }
 

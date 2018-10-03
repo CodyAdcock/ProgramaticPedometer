@@ -12,6 +12,12 @@
 		C3D004392163FF920042F12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D004372163FF920042F12F /* Main.storyboard */; };
 		C3D0043B2163FF990042F12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D0043A2163FF990042F12F /* Assets.xcassets */; };
 		C3D0043E2163FF990042F12F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D0043C2163FF990042F12F /* LaunchScreen.storyboard */; };
+		C3D0044E216404950042F12F /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0044D216404950042F12F /* Submission.swift */; };
+		C3D004522164053E0042F12F /* SubmissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D004512164053E0042F12F /* SubmissionController.swift */; };
+		C3D00454216408640042F12F /* StepCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D00453216408640042F12F /* StepCalculatorViewController.swift */; };
+		C3D0045821640B960042F12F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0045721640B950042F12F /* UIViewExtension.swift */; };
+		C3EA8C5C21652611009EB96A /* PedometerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA8C5B21652611009EB96A /* PedometerController.swift */; };
+		C3EA8C6021653511009EB96A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA8C5F21653511009EB96A /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,13 @@
 		C3D0043A2163FF990042F12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3D0043D2163FF990042F12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3D0043F2163FF990042F12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D0044D216404950042F12F /* Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
+		C3D004512164053E0042F12F /* SubmissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionController.swift; sourceTree = "<group>"; };
+		C3D00453216408640042F12F /* StepCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCalculatorViewController.swift; sourceTree = "<group>"; };
+		C3D0045721640B950042F12F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C3EA8C5B21652611009EB96A /* PedometerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerController.swift; sourceTree = "<group>"; };
+		C3EA8C5D21653511009EB96A /* CalculatorProgramatic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalculatorProgramatic.entitlements; sourceTree = "<group>"; };
+		C3EA8C5F21653511009EB96A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EA8C6021653511009EB96A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				C3D004322163FF920042F12F /* CalculatorProgramatic */,
 				C3D004312163FF920042F12F /* Products */,
+				C3EA8C5E21653511009EB96A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +69,27 @@
 		C3D004322163FF920042F12F /* CalculatorProgramatic */ = {
 			isa = PBXGroup;
 			children = (
+				C3EA8C5D21653511009EB96A /* CalculatorProgramatic.entitlements */,
+				C3D0044C2164018F0042F12F /* Models */,
+				C3D0044B2164018D0042F12F /* Controllers */,
+				C3D0044A2164018C0042F12F /* ViewControllers */,
+				C3D00445216401610042F12F /* Views */,
+				C3D004492164016D0042F12F /* Resources */,
+			);
+			path = CalculatorProgramatic;
+			sourceTree = "<group>";
+		};
+		C3D00445216401610042F12F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C3D004492164016D0042F12F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0045721640B950042F12F /* UIViewExtension.swift */,
 				C3D004332163FF920042F12F /* AppDelegate.swift */,
 				C3D004352163FF920042F12F /* ViewController.swift */,
 				C3D004372163FF920042F12F /* Main.storyboard */,
@@ -61,7 +97,40 @@
 				C3D0043C2163FF990042F12F /* LaunchScreen.storyboard */,
 				C3D0043F2163FF990042F12F /* Info.plist */,
 			);
-			path = CalculatorProgramatic;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3D0044A2164018C0042F12F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3D00453216408640042F12F /* StepCalculatorViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3D0044B2164018D0042F12F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3D004512164053E0042F12F /* SubmissionController.swift */,
+				C3EA8C5B21652611009EB96A /* PedometerController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C3D0044C2164018F0042F12F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0044D216404950042F12F /* Submission.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3EA8C5E21653511009EB96A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA8C5F21653511009EB96A /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +165,11 @@
 				TargetAttributes = {
 					C3D0042F2163FF920042F12F = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EA8C5C21652611009EB96A /* PedometerController.swift in Sources */,
+				C3D0044E216404950042F12F /* Submission.swift in Sources */,
+				C3D004522164053E0042F12F /* SubmissionController.swift in Sources */,
 				C3D004362163FF920042F12F /* ViewController.swift in Sources */,
 				C3D004342163FF920042F12F /* AppDelegate.swift in Sources */,
+				C3D0045821640B960042F12F /* UIViewExtension.swift in Sources */,
+				C3D00454216408640042F12F /* StepCalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +361,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CalculatorProgramatic/CalculatorProgramatic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
-				INFOPLIST_FILE = CalculatorProgramatic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CalculatorProgramatic/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +380,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CalculatorProgramatic/CalculatorProgramatic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
-				INFOPLIST_FILE = CalculatorProgramatic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CalculatorProgramatic/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
